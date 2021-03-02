@@ -3,14 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Products</title>
+    <h1>Products</h1>
+{%extends 'base.html'%}
+{%block content%}
+    <def class="row">
+        {%for product in products%}
+
+        <def class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </def>
+        {% endfor %}
+    </def>
+
 </head>
 <body>
-<ul>
-    {%for product in products%}
-        <li>{{product.name}}</li>
-    {%endfor%}
-</ul>
 
+
+{% endblock %}
 
 
 </body>
