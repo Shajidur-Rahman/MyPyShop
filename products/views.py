@@ -4,5 +4,6 @@ from .models import Products
 # Create your views here.
 
 def hello(request):
-    producte = Products.objects.all()
-    return render(request, 'index.html')
+    products = Products.objects.all()
+    return render(request, 'index.html',
+                  {'products': products})

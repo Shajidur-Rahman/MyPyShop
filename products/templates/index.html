@@ -5,10 +5,13 @@
     <title>Products</title>
 </head>
 <body>
-    <ul>
-        <li>Items 1</li>
-        <li>Items 1</li>
-        <li>Items 1</li>
-    </ul>
+<ul>
+    {%for product in products%}
+        <li>{{product.name}}</li>
+    {%endfor%}
+</ul>
+
+
+
 </body>
 </html>
